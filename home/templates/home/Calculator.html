@@ -1,0 +1,107 @@
+{% extends "home/Layout.html" %}
+{% block title %}
+Калькулятор площади дома
+{% endblock %}
+{% block content %}
+
+<div class="body-content-center">
+    
+
+    {% for i in range %}
+    <div>
+        {% for n in range %}
+            <div id="{{n}}{{i}}" class="square"></div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div>
+
+        {% verbatim  %}
+        <div id='floorss' class="calc-item">
+            <template >
+                <li v-for="floor in floorList" :key="floor.id" v-on:click='chFloor(floor.id)'>
+                    {{floor.name}}: {{floor.fcount}} м2
+                </li>
+                <button class="login-button" v-on:click='addFloor()'>Добавить этаж</button>
+            </template>
+        </div>
+        {% endverbatim  %}
+        <label id="price" name="price" class="calc-item">0 м2</label>
+    </div>
+</div>
+
+<script>
+    let count = 0;
+    var adding;
+    var savestate = false;
+    var t;
+    var classList;
+    var reverseClassList;
+    const handler = e => {
+        if (savestate && e.buttons === 0 )
+        {
+            savestate = false;
+        }
+
+        if (!savestate && e.buttons === 1 )
+        {
+            if (e.target.classList == 'square') 
+            {
+                classList = 'square active';
+                reverseClassList = 'square';
+                adding = 1;
+            }
+            else
+            {
+                classList = 'square';
+                reverseClassList = 'square active';
+                adding = -1;
+            }
+            savestate = true;
+        }
+
+        if (e.buttons === 1 && e.target != t && e.target.classList == reverseClassList)
+        {
+            e.target.classList = classList;
+            count += adding;
+            t = e.target;
+        }
+        document.getElementById('price').textContent = count + " м2";
+    }
+    
+    const handlercl = ecl => {
+        if (ecl.target.classList == 'square')
+        {
+            ecl.target.classList.add('active')
+            count++;
+        }
+        else if (ecl.target.classList == 'square active')
+        {
+            ecl.target.classList.remove('active');
+            count--;
+        }
+        document.getElementById('price').textContent = count + " м2";
+    }
+
+    document.addEventListener('click', handlercl);
+    document.addEventListener('mousemove', handler);
+
+    function reset()
+    {
+        count = 0;
+        for (i = 10; i<21; i++)
+        {
+            for(k = 10; k<21; k++)
+            {
+                const doc = document.getElementById(''+i+''+k)
+                if (doc.classList == 'square active')
+                {
+                    doc.classList.remove('active');
+                }
+            }
+        }
+    }
+
+</script>
+{% endblock %}

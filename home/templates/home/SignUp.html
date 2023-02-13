@@ -1,0 +1,30 @@
+{% extends "home/Layout.html" %}
+{% block title %}
+Регистрация нового пользователя
+{% endblock %}
+{% block content %}
+
+<div class="body-content-center">
+    
+    <form method="POST" class="reg-form">
+        
+        <h1>Регистрация</h1>
+        {% csrf_token %}
+        
+        <h2>Логин</h2>
+        <input name="username" type="username" id="username" class="login-item"></input>
+        
+        <h2>Пароль</h2>
+        <input name="password1" type="password" id="password1" class="login-item"></input>
+
+        <h2>Повторите пароль</h2>
+        <input name="password2" type="password" id="password2" class="login-item"></input>
+
+        <button class="login-button" type="submit">
+        <h2 type="submit">Зарегистрироваться</h2>
+        </button>
+    </form>
+
+</div> 
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "home/Layout.html" %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+
+<div class="body-content-start">
+{% for house in House_list %}
+        <div class="homes-bars">
+
+                <img src="{{ house.image.url }}" />
+
+                <div class="homes-item">
+                        <div class="homes-item-max">
+                                <d>Адрес: {{ house.address }}</d>
+                        </div>
+                        <div class="homes-item-max">
+                                <m>Владелец: {{ house.owner }}</m>
+                        </div>
+                        <div class="homes-item-max">
+                                <m>Этажи: {{ house.floors }}</m>
+                        </div>
+                        <div class="homes-item-max">
+                                <m>Общие м2: {{ house.squareMeters }}</m>
+                        </div>
+                        <div class="homes-item-max">
+                                <m>Цена: ${{ house.price }}</m>
+                        </div>
+                        <div class="homes-item-max">
+                                <d>Продаётся с: {{ house.inDate }}</d>
+                        </div>
+                </div>
+        </div>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,232 @@
+.homei {
+    font-weight: 600;
+    color: white;
+}
+
+.page {
+    min-height: 96%;
+}
+
+.body {
+    background-color: black;
+    height: 92vh;
+}
+
+.footer {
+    color: white;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    border-radius: 1000px;
+    font-size: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    box-shadow: 0 0 25px white;
+    padding: 10px 6px 10px 6px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 15%;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-item {
+    text-align: start;
+    font-variant: small-caps;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.body-content {
+    min-height: 100%;
+    padding-bottom: 90px;
+    color: white;
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body-content-center {
+    min-height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.body-content-start {
+    min-height: 91vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+    align-content: stretch;
+    padding: 0;
+    margin: 0;
+}
+
+.login-form{
+    position: relative;
+    display: flex;
+    border: white;
+    border-radius: 1000px;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    box-shadow: 0 0 25px white;
+    padding: 10px 6px 10px 6px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 10%;
+}
+
+.login-button {
+    background-color: black;
+    color: yellow;
+    position: relative;
+    display: flex;
+    border: white;
+    border-radius: 1000px;
+    box-shadow: 0 0 25px white;
+    padding: 10px 30px 10px 30px;
+    margin: 30px 30px 10px 30px;
+}
+
+.login-item {
+    background-color: black;
+    color: yellow;
+    position: relative;
+    display: flex;
+    border: white;
+    border-radius: 1000px;
+    box-shadow: 0 0 25px white;
+    padding: 5px 10px 10px 10px;
+    margin: 0px 30px 10px 30px;
+}
+
+.reg-form{
+    position: relative;
+    display: flex;
+    border: white;
+    border-radius: 100px;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    box-shadow: 0 0 25px white;
+    padding: 10px 6px 10px 6px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 10%;
+}
+
+.square {
+    width: 2vh;
+    height: 2vh;
+    border-style: solid;
+    border-width: 2px;
+    color: white;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.active {
+    background-color: white;
+}
+
+.homes-bars {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 30px 30px 10px 30px;
+    padding: 15px 15px 15px 15px;
+    border: white;
+    border-radius: 50px;
+    box-shadow: 0 0 25px white;
+    min-width: 800px;
+    width: 45%;
+    min-height: 300px;
+    height: auto;
+}
+
+.homes-bars img {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 0 0 10px white;
+    margin: 10px 35px 10px 35px;
+    max-width: 50%;
+    max-height: 90%;
+
+}
+
+.homes-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100%;
+}
+
+.homes-item-max {
+    color: yellow;
+    border: white;
+}
+
+.homes-item-max d {
+    margin: 10px 15px 0px 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 1000px;
+    box-shadow: 0 0 25px white;
+}
+
+.homes-item-max m {
+    margin: 10px 5px 0px 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 1000px;
+    box-shadow: 0 0 25px white;
+}
+
+.calc-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100%;
+    color: yellow;
+    border: white;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 25px white;
+}

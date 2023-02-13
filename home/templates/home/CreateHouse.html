@@ -1,0 +1,43 @@
+{% extends "home/Layout.html" %}
+{% block title %}
+Создание нового дома
+{% endblock %}
+{% block content %}
+
+<div class="body-content-center">
+    
+    <form enctype="multipart/form-data" method="POST" class="reg-form">
+        
+        {% csrf_token %}
+        <h1>Создание дома</h1>
+
+        <h2>Адрес</h2>
+        <input name="address" id="address" type="text" class="login-item"></input>
+
+        <h2>Фото дома</h2>
+        <input name="image" id="image" type="file" class="login-item" accept="image/*"></input>
+        
+        <h2>Владелец</h2>
+        <select name="owner" id="owner" class="login-item"> 
+            {% for p in form.owner %}
+            {{ p }}
+            {% endfor %}
+        </select>
+        
+        <h2>Кол-во этажей</h2>
+        <input name="floors" id="floors" type="number" class="login-item"></input>
+
+        <h2>Общее кол-во м2</h2>
+        <input name="squareMeters" id="squareMeters" type="number" class="login-item"></input>
+
+        <h2>Цена</h2>
+        <input name="price" id="price" type="number" class="login-item"></input>
+    
+        <button class="login-button" type="submit">
+            <h2 type="submit">Создать</h2>
+            </button>
+    </form>
+
+</div>
+
+{% endblock %}
